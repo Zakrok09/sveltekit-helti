@@ -32,9 +32,7 @@
     
 
 
-    function callLogout() {
-        logout();
-    };
+    
 
     let panelState = 'records';
     function changeState(s)  {

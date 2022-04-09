@@ -1,6 +1,11 @@
 <script>
     export let databaseRef;
     let saveRef = databaseRef;
+    import {logout} from '../firebase';
+
+    function callLogout() {
+        logout();
+    };
 </script>
 
 <style>
@@ -44,6 +49,7 @@
         <p>{saveRef.email}</p>
         <p>{saveRef.name}</p>
         <p>{saveRef.type}</p>
+        <p style="cursor:pointer;" on:click={callLogout}>Log Out</p>
     </div>
 
 </div>
