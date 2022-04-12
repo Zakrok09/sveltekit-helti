@@ -1,9 +1,11 @@
-import adapter from '@sveltejs/netlify';
+import adapter from '@sveltejs/adapter-netlify';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter(),
+		adapter: adapter({
+            split: false,
+        }),
 		vite: {
             ssr:{
                 noExternal: ['chart.js']
